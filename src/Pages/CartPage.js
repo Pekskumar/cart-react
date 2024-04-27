@@ -46,8 +46,9 @@ const CartPage = () => {
       const response = await fetch(
         //  `http://localhost:3001/create-checkout-session`,
         // `https://complete-tasteful-november.glitch.me/create-checkout-session`,
-        `https://aquamarine-jungle-moth.glitch.me/create-checkout-session`,
-        // `https://blue-youthful-bean.glitch.me/create-checkout-session`,
+        `https://aquamarine-jungle-moth.glitch.me/create-checkout-session`, // working
+        // `https://vivacious-furry-surgeon.glitch.me/create-checkout-session`,
+        
         {
           method: "POST",
           headers: headers,

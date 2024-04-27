@@ -71,7 +71,7 @@ const Header = () => {
             <div className="left">
               <div className="logo">
                 <div
-                  onClick={() => navigate("/")}
+                  onClick={() => navigate("/dashboard")}
                   className="d-flex align-item-center"
                 >
                   <img src={mainlogo} alt="" />
@@ -102,7 +102,7 @@ const Header = () => {
                     onClick={() => setIsMenuOpen(false)}
                     className="list-items"
                   >
-                    <NavLink exact to="/">
+                    <NavLink exact to="/dashboard">
                       Home
                     </NavLink>
                   </li>
