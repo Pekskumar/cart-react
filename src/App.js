@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { Navigate, Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
@@ -18,6 +18,7 @@ function App() {
       <>
         <Header />
         <Routes>
+          <Route path="*" element={<Navigate to="/" replace />} />
           <Route path="/" element={<Dashboard />} />
           <Route path="/product" element={<Products />} />
           <Route path="/product-detail/:id" element={<ProductDetail />} />
