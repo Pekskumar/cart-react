@@ -1,0 +1,43 @@
+export const API_URL = {
+  BASEURL: process.env.REACT_APP_APIBASEPATH,
+  SIGNUP: "signup",
+  UPDATEUSER: "updateUser",
+  LOGIN: "login",
+  SETPASSWORD: "setpassword",
+  VERIFYMAIL: "verifymail",
+  FORGOTPASSWORD: "forgotpassword",
+  GETPROJECTTERMBYCATEGORY: "getProjectTermByCategory",
+  GETRESOURCES: "getresources",
+  GETPAYMENTDETAILS: "getpaymentdetails",
+  GETRESOURCE: "getResource",
+  CREATERESOURCE: "createResource",
+  GETALLDONATION: "getallDonation",
+  GETALLMEMBERS: "getallMembers",
+  DELETERESOURCE: "deleteResource",
+  DELETEADMIN: "deleteAdmin",
+  GETRESOURCESID: "getResourcesId",
+  UPDATERESOURCE: "updateResource",
+  GETMEMBERBYID: "getMemberbyId",
+  GETCOUNT: "getCount",
+  GETLATESTFIVEMEBERS: "getletestFiveMembers",
+  GETALLADMINS: "getallAdmins",
+  CREATEADMINUSER: "createAdminUser",
+  UPDATEADMIN: "updateAdmin",
+  GETADMINID: "getAdminId",
+  PUBLISHRESOURCE: "publishResource",
+  GETDOCUMENT: "getdocument",
+  SUBSCRIPTIONGRAPH: "subscriptiongraph",
+  SUBSCRIPTIONCASHFLOWGRAPH: "subscriptioncashflowgraph",
+  DONATIONCASHFLOWGRAPH: "donationcashflowgraph",
+  GETSUBSCRIPTION: "getsubscription",
+  SUBSCIPTIONRATIO: "subscriptionRatio",
+  MEMBERSTATUS: "memberstatus",
+  CREATESESSION: "createSession",
+  GETALLPAYMENTS: "getallPayments",
+  CREATEPAYSESSION: "createpaySession",
+};
+ 
+
+
+
+
