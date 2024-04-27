@@ -43,25 +43,25 @@ const Header = () => {
 
   let dispatch = useDispatch();
   let navigate = useNavigate();
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(
-          "https://dummyjson.com/products?limit=100"
-        );
-        if (
-          response?.data?.products !== "" &&
-          response?.data?.products !== undefined &&
-          response?.data?.products !== null
-        ) {
-          dispatch(GlobalShowProductsSlice(response?.data?.products));
-        }
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-    fetchData();
-  }, []);
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await axios.get(
+  //         "https://dummyjson.com/products?limit=100"
+  //       );
+  //       if (
+  //         response?.data?.products !== "" &&
+  //         response?.data?.products !== undefined &&
+  //         response?.data?.products !== null
+  //       ) {
+  //         dispatch(GlobalShowProductsSlice(response?.data?.products));
+  //       }
+  //     } catch (error) {
+  //       console.error("Error fetching data:", error);
+  //     }
+  //   };
+  //   fetchData();
+  // }, []);
 
   return (
     <>

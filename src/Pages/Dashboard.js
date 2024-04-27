@@ -1,16 +1,39 @@
-import React from "react";
+import React, { useEffect } from "react";
 import HeroBanner from "../Components/HeroBanner";
 import HotCategories from "../Components/HotCategories";
 import TrendingThisWeek from "../Components/TrendingThisWeek";
 import YouMightLike from "../Components/YouMightLike";
 import BrandSlider from "../Components/BrandSlider";
 import Footer from "../Components/Footer";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { GlobalShowProductsSlice } from "../ReactToolkit/ProductSlice";
+import axios from "axios";
 
 const Dashboard = () => {
+  let dispatch = useDispatch()
   const ProductShowData = useSelector(
     (state) => state.GlobalShowProduct.GlobalShowProducts
   );
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          "https://dummyjson.com/products?limit=100"
+        );
+        if (
+          response?.data?.products !== "" &&
+          response?.data?.products !== undefined &&
+          response?.data?.products !== null
+        ) {
+          dispatch(GlobalShowProductsSlice(response?.data?.products));
+        }
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchData();
+  }, []);
 
   return (
     <div>
