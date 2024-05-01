@@ -13,12 +13,15 @@ import Wishlist from "./Pages/Wishlist";
 import Category from "./Pages/Category";
 
 function App() {
+  console.log('====================================');
+  console.log("process.env.PUBLIC_URL",process.env.PUBLIC_URL);
+  console.log('====================================');
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <>
         <Header />
         <Routes>
-          <Route path="/*" element={<Navigate to="/dashboard" replace />} />
+          <Route path="/" element={<Navigate to="/dashboard" replace />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/product" element={<Products />} />
           <Route path="/product-detail/:id" element={<ProductDetail />} />
