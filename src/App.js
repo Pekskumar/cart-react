@@ -18,8 +18,9 @@ function App() {
       <>
         <Header />
         <Routes>
-          <Route path="/" element={<Navigate to="/dashboard" replace />} />
-          <Route path="/dashboard" element={<Dashboard />} />
+          {/* <Route path="/" element={<Navigate to="/dashboard" replace />} /> */}
+          {/* <Route path="*" element={<Navigate to="/" />} /> */}
+          <Route path="/" element={<Dashboard />} />
           <Route path="/product" element={<Products />} />
           <Route path="/product-detail/:id" element={<ProductDetail />} />
           <Route path="/cart" element={<CartPage />} />
@@ -28,7 +29,7 @@ function App() {
           <Route path="/successpayment" element={<SuccessPaymentPage />} />
           <Route path="/category" element={<Category />} />
           {/* Catch-all route */}
-          <Route path="*" element={<Navigate to="/dashboard" />} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         <Footer />
         <ToastContainer />
