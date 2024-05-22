@@ -1,14 +1,17 @@
 import React, { useEffect } from "react";
 import SuccessIcon from "../Assets/Images/SuccessIcon";
 import { AddToCartSlice } from "../ReactToolkit/ProductSlice";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const SuccessPaymentPage = () => {
+  const ProductShowData = useSelector(
+    (state) => state.GlobalShowProduct.GlobalShowProducts
+  );
   let dispatch = useDispatch();
   useEffect(() => {
     dispatch(AddToCartSlice([]));
-  }, []);
+  }, [ProductShowData]);
 
   return (
     <div>
