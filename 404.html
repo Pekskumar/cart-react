@@ -7,16 +7,11 @@
   <script>
     // Single Page Apps for GitHub Pages
     (function() {
-      var redirect = sessionStorage.redirect;
-      delete sessionStorage.redirect;
-      if (redirect && redirect !== location.href) {
-        history.replaceState(null, null, redirect);
+      var path = window.location.pathname;
+      if (!path.startsWith('/cart-react')) {
+        window.location.replace('/cart-react' + path + window.location.search);
       }
     })();
-  </script>
-  <script>
-    // GitHub Pages SPA Redirect
-    window.location.href = '/cart-react' + window.location.pathname + window.location.search;
   </script>
 </head>
 <body>
