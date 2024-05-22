@@ -5,10 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Redirecting...</title>
   <script>
-    window.location.href = '/cart-react/index.html';
+    // Single Page Apps for GitHub Pages
+    (function() {
+      var redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redirect && redirect !== location.href) {
+        history.replaceState(null, null, redirect);
+      }
+    })();
+  </script>
+  <script>
+    // GitHub Pages SPA Redirect
+    window.location.href = '/cart-react' + window.location.pathname + window.location.search;
   </script>
 </head>
 <body>
-  If you are not redirected automatically, <a href="/cart-react/index.html">click here</a>.
+  If you are not redirected automatically, <a href="/cart-react">click here</a>.
 </body>
 </html>
