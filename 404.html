@@ -6,7 +6,6 @@
   <title>Redirecting...</title>
   <script>
     // Single Page Apps for GitHub Pages
-    // Redirect all 404 requests to index.html
     (function() {
       var redirect = sessionStorage.redirect;
       delete sessionStorage.redirect;
@@ -17,10 +16,10 @@
   </script>
   <script>
     // GitHub Pages SPA Redirect
-    window.location.href = '/cart-react/index.html' + window.location.search;
+    window.location.href = '/cart-react' + window.location.pathname + window.location.search;
   </script>
 </head>
 <body>
-  If you are not redirected automatically, <a href="/cart-react/index.html">click here</a>.
+  If you are not redirected automatically, <a href="/cart-react">click here</a>.
 </body>
 </html>
