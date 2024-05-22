@@ -34,7 +34,6 @@ const CartPage = () => {
     setPaymentLoader(true);
     try {
       const stripe = await loadStripe(
-        // "pk_test_51P69w5SFbiLnc0CEseUT0ferwLaPLHCDZyNwLHSwevRu2NKJJmonLWhCq7B4H1MsV52NuMn8E7Jvt7ESHrWsD5D400H5JG5PFy"
         "pk_test_51PA68JSJPBTss550uos9FlbPHqq5Ev2joCKPMkLF3h7lxBHLOrGH3zq4tAzlKC2N1HCQCzTFNUpNl2kGixMu7po500dbZ4LlHv"
       );
       const body = {
