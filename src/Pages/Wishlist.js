@@ -14,7 +14,7 @@ const Wishlist = () => {
   }, []);
   return (
     <>
-      <div className="container">
+      <div className="container wishlist-one">
         <div className="product-heading">
           <h4>WISHLIST</h4>
           {/* <p>{WishlistData?.length} products</p> */}

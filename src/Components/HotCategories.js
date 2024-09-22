@@ -36,7 +36,7 @@ const HotCategories = (props) => {
         <div className="hot-categories-slider">
           <Slider {...settings}>
             {props?.data
-              ?.filter((f) => f.category === "smartphones")
+              ?.filter((f) => f.category.includes("d"))
               .map((item, index) => (
                 <div className="hot-categories-content" key={index}>
                   <div className="hot-categories-content-img">

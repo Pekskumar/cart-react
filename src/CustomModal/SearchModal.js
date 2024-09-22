@@ -49,7 +49,7 @@ const SearchModal = (props) => {
           CLOSE
         </button> */}
       </div>
-      <div className="modal-content products">
+      <div className="modal-content ">
         {SearchList?.length > 0 ? (
           <div className=" trending you-might-like-section">
             <div className="trending-content">
@@ -59,7 +59,7 @@ const SearchModal = (props) => {
             </div>
           </div>
         ) : (
-          <div className="products empty-cart">
+          <div className=" empty-cart">
             <div>
               <h5>Your SearchList is currently empty.</h5>
               <p className="primary-btn" onClick={()=>props.toggleModal()}>Continue Browsing</p>

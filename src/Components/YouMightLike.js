@@ -16,7 +16,7 @@ const YouMightLike = (props) => {
       <div className="container">
         <div className="trending-content">
           {props?.data
-            ?.filter((f) => f.category === "skincare")
+            ?.filter((f) => f.category.includes("a"))
             .map(
               (item, index) =>
                 index < 4 && (
