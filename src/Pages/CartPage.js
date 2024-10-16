@@ -178,8 +178,9 @@ const CartPage = () => {
             </div>
           </div>
         )}
-        <YouMightLike data={ProductShowData} />
+       
       </div>
+      <YouMightLike data={ProductShowData} />
     </>
   );
 };

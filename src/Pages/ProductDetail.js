@@ -177,7 +177,7 @@ const ProductDetail = () => {
         <div className="heading">
           <h2>Hot Categories</h2>
         </div>
-        <div className="container">
+        <div className="">
           <div className="hot-categories-slider">
             <Slider {...settings}>
               {ProductShowData?.map((item, index) => (
